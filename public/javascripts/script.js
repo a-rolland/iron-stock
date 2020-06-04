@@ -41,3 +41,7 @@ for (let i=0; i<actions.length; i++) {
   const name = actions[i].getElementsByClassName('symbolName')[0].innerText
   printCharts(name)
 }
+
+// Handlebars.registerHelper("hacerAlgo", function() {
+//   return new Handlebars.SafeString("HELLO")
+//  })

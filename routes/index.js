@@ -1,13 +1,14 @@
 const express = require('express');
 const router  = express.Router();
-const alphaKey = 'AKW7U8FI1GS9YXYK'
 
 const Company = require('../models/company');
 
 /* GET home page */
 router.get('/', (req, res, next) => {
   Company.find()
-  .then(companies => res.render('index', {companies, alphaKey}))
+  .then(companies => {
+    res.render('index', {companies})
+  })
   .catch(err => `Error : ${err}`)
 });
 
