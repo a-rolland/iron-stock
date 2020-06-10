@@ -7,7 +7,7 @@ const Company = require('../models/company');
 router.get('/', (req, res, next) => {
   Company.find()
   .then(companies => {
-    res.render('index', {companies})
+    res.render('index', {companies: companies, user: req.session.currentUser})
   })
   .catch(err => `Error : ${err}`)
 });

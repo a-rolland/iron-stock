@@ -1,3 +1,5 @@
+{{#if user}}
+<h2>Hello {{user.username}}</h2>
 <div class="container">
     <div class="row">
         {{#each companies}}
@@ -12,3 +14,7 @@
         {{/each}}
     </div>
 </div>
+{{else}}
+<h3>Get logged in to see your actions !</h3>
+{{/if}}
+

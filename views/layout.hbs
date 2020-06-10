@@ -11,8 +11,17 @@
 <body class="p-0">
 
   <nav class="navbar navbar-expand-sm navbar-dark bg-primary d-flex justify-content-between">
-      <a class="navbar-brand" href="/">My actions</a>
-      <a class="navbar-brand" href="/add">Add</a>
+      <a class="navbar-brand d-flex mr-auto px-0" href="/">My actions</a>
+      {{#unless user}}
+      <a class="navbar-brand d-flex px-0" href="/login">Login</a>
+      <a class="navbar-brand d-flex px-0" href="/signup">Signup</a>
+      {{/unless}}
+      {{#if user}}
+      <a class="navbar-brand d-flex px-0" href="/add">Add</a>
+      <form action="/logout" class="form-inline my-2 my-lg-0 p-2" style="display: inline;" method="POST">
+        <button class="btn btn-outline-warning my-2 my-sm-0 text-white" type="submit">Logout</button>
+      </form>
+      {{/if}}
   </nav>
 
   <main class="m-5">
