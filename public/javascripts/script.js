@@ -25,8 +25,8 @@ function printCharts(shortName) {
         datasets: [
           {
             label: 'Stock Chart',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(0,123,255)',
+            borderColor: 'rgb(0,123,255)',
             data: stockPrices
           }
         ]
