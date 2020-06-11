@@ -19,7 +19,16 @@ const userSchema = new Schema(
     passwordHash: {
       type: String,
       required: [true, 'Password is required.']
-    }
+    },
+    companies: [
+      // {
+      //   name: String,
+      //   symbolName: {
+      //     type: String,
+      //     unique: true
+      //     }
+      // },
+    ]
   },
   {
     timestamps: true

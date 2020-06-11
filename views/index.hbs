@@ -6,9 +6,9 @@
             <div class="card text-center m-5 w-100" id="actionsCard">
                 <canvas id="my-chart-{{symbolName}}"></canvas>
                 <div class="card-body">
-                    <span class="card-title"><a href="/chart/{{_id}}">{{name}}</a></span>
+                    <span class="card-title">{{name}}</span><span> | </span>
                     <span class="symbolName">{{symbolName}}</span>
-                    <a href="/delete/{{_id}}" class="btn btn-danger text-white mx-3">Delete</a>
+                    <a href="/delete/{{name}}" class="btn btn-danger text-white mx-3">Delete</a>
                 </div>
             </div>
         {{/each}}
@@ -17,4 +17,3 @@
 {{else}}
 <h3>Get logged in to see your actions !</h3>
 {{/if}}
-
