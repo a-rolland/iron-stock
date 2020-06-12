@@ -21,13 +21,6 @@ const userSchema = new Schema(
       required: [true, 'Password is required.']
     },
     companies: [
-      // {
-      //   name: String,
-      //   symbolName: {
-      //     type: String,
-      //     unique: true
-      //     }
-      // },
     ]
   },
   {

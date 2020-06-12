@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const saltRound = 10; 
 
 const User = require('../models/user');
+const user = require('../models/user');
 
 /* GET home page */
 router.get('/signup', (req, res, next) => {
@@ -92,8 +93,10 @@ router.post('/login', (req, res, next) => {
 })
 
 router.post('/logout', (req, res) => {
-  req.session.destroy();
-  res.redirect('/');
+  if (req.session.currentUser) {
+    req.session.destroy();
+    res.redirect('/');
+  }
 });
 
 
